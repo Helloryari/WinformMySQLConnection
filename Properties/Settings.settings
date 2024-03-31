@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WinFormMySQLConnection.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="JINYU_DB_CONN_STRING" Type="System.String" Scope="User">
+      <Value Profile="(Default)">UID=jyo;PWD=9876;Server=192.168.0.211;Port=3306;Database=jinyu_db</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
