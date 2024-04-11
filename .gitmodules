@@ -1,0 +1,3 @@
+[submodule "CommDBLib"]
+	path = CommDBLib
+	url = https://github.com/Helloryari/CommDBLib

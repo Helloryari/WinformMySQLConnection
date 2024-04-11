@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="JINYU_DB_CONN_STRING" Type="System.String" Scope="User">
-      <Value Profile="(Default)">UID=jyo;PWD=9876;Server=192.168.0.211;Port=3306;Database=jinyu_db</Value>
+      <Value Profile="(Default)">UID=jyo;PWD=9876;Server=192.168.0.211;Port=3306;Database=jinyu_db;charset=utf8</Value>
     </Setting>
   </Settings>
 </SettingsFile>

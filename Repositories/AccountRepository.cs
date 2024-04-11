@@ -42,7 +42,7 @@ namespace WinFormMySQLConnection.Repositories
                 ", cell_phone = @cell_phone\n" +
                 "WHERE id = @id";
 
-            using (MySqlDb? db = GetJinyuDb())
+            using (MySqlDb db = GetJinyuDb())
             {
                 db.Execute(query, new SqlParameter[]
                 {
@@ -60,7 +60,7 @@ namespace WinFormMySQLConnection.Repositories
             string query = "" +
                 "DELETE FROM account WHERE id = @id";
 
-            using (MySqlDb? db = GetJinyuDb())
+            using (MySqlDb db = GetJinyuDb())
             {
                 db.Execute(query, new SqlParameter[]
                 {
@@ -73,7 +73,7 @@ namespace WinFormMySQLConnection.Repositories
         {
             List<Account> list = new List<Account>();
             string query = "SELECT * FROM account;";
-            using MySqlDb? db = GetJinyuDb();
+            using MySqlDb db = GetJinyuDb();
             using (IDataReader dr = db.GetReader(query))
             {
                 while (dr.Read())

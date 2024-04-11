@@ -25,7 +25,7 @@ namespace WinFormMySQLConnection.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("UID=jyo;PWD=9876;Server=192.168.0.211;Port=3306;Database=jinyu_db")]
+        [global::System.Configuration.DefaultSettingValueAttribute("UID=jyo;PWD=9876;Server=192.168.0.211;Port=3306;Database=jinyu_db;charset=utf8")]
         public string JINYU_DB_CONN_STRING {
             get {
                 return ((string)(this["JINYU_DB_CONN_STRING"]));

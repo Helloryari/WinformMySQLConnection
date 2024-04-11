@@ -18,7 +18,8 @@ namespace WinFormMySQLConnection
     {
 
         private MySqlConnection _conn = default!;
-        private AccountRepository _accountRepository = default!;
+        private AccountRepository _accountRepository = new AccountRepository();
+        private List<Account> _accounts = default!;
 
 
         private void btn_conn_Click(object sender, EventArgs e)
@@ -44,10 +45,10 @@ namespace WinFormMySQLConnection
         {
             Account account = new Account
             {
-                Id = 1,
+                Id = 3,
                 Email = "abceEmail@naver.com",
                 Pwd = "10203040",
-                NickName = "어르신",
+                NickName = "얼레리",
                 CellPhone = "01033334444",
             };
 
@@ -63,19 +64,34 @@ namespace WinFormMySQLConnection
         private void btn_select_Click(object sender, EventArgs e)
         {
 
-            var accounts = _accountRepository.GetAll();
-            foreach (var account in accounts)
-            {
-                MessageBox.Show($"email : {account.Email} / pwd : {account.Pwd} / nickname : {account.NickName} / cell_phone : {account.CellPhone}");
-            }
+            Accounts = _accountRepository.GetAll();
+            //foreach (var account in accounts)
+            //{
+            //    MessageBox.Show($"email : {account.Email} / pwd : {account.Pwd} / nickname : {account.NickName} / cell_phone : {account.CellPhone}");
+            //}
+
+            dataGridView1.DataSource = Accounts;
 
         }
-        
+
+        public List<Account> Accounts
+        {
+            get => _accounts; set
+            {
+                if (_accounts != value)
+                {
+                    _accounts = value;
+                    //OnPropertyChanged();
+                }
+            }
+        }
+
         public Form1()
         {
             InitializeComponent();
 
-            _accountRepository = new AccountRepository();
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            Controls.Add(dataGridView1);
         }
     }
 }
